@@ -1,0 +1,7 @@
+[http]
+	proxy = http://135.251.249.250:8000
+[user]
+	name = lilileilei
+	email = zhanghl86@126.com
+[credential]
+	helper = store
