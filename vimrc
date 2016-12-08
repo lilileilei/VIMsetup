@@ -157,4 +157,6 @@ nmap <leader>bl :ls<CR>
 ""nerdcomment
 map <F12> <leader>ci<CR>
 
+au BufNewFile,BufRead *.k3.txt  setf log
+au BufNewFile,BufRead *.LOG,*.out  setf out
 
