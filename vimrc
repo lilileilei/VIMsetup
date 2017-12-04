@@ -29,7 +29,9 @@ set history=50              " keep 50 lines of command line history
 set hlsearch                " highlight searched text
 set incsearch               " do incremental searching
 set laststatus=2            " always show status line
+
 set mouse=a                 " don't copy line numbers when marking in noGUI
+
 set ruler                   " show the cursor position all the time
 set showcmd                 " display incomplete commands
 set showmatch               " cursor will briefly jump to the matching brace when you insert one
@@ -81,12 +83,18 @@ nnoremap <TAB> :b <C-Z>
 
 "################################# KLAWISZOLOGIA ######################################
 
-map     <F5> :split<CR>                     " horizontal split
-map     <F6> :vsplit<CR>                    " vertical split
-map     <F7> :only<CR>                      " back to one window
-map     <F8> :set wrap!<CR>                 " toggle line wrapping
-map     <F9> :set number!<CR>               " toggling line numbers
+map     <F6> :split<CR>                     " horizontal split
+map     <F7> :vsplit<CR>                    " vertical split
+map     <F8> :only<CR>                      " back to one window
+map     <F9> :set wrap!<CR>                 " toggle line wrapping
+"map     <F9> :set number!<CR>               " toggling line numbers
+map     <F5> :TagbarToggle<CR>
 map     <F10> :call Switch_HPP_CPP()<CR>    " calling function for switching cpp-hpp
+
+let g:tagbar_width = 40       "设置宽度，默认为40
+"autocmd VimEnter * nested :call tagbar#autoopen(1)    "打开vim时自动打开
+"tagbarlet g:tagbar_left = 1         "在左侧"  
+let g:tagbar_right = 1        "在右侧
 
 " Make shift-insert work like in Xterm:
 map     <S-Insert>      <MiddleMouse>
@@ -157,6 +165,7 @@ nmap <leader>bl :ls<CR>
 ""nerdcomment
 map <F12> <leader>ci<CR>
 
-au BufNewFile,BufRead *.k3.txt  setf log
-au BufNewFile,BufRead *.LOG,*.out  setf out
+au BufNewFile,BufRead *.k3.txt setf log
+au BufNewFile,BufRead *.LOG,*.out setf out
+
 
