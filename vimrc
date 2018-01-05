@@ -130,8 +130,9 @@ nmap <leader>bm :CtrlPMixed<cr>
 nmap <leader>bs :CtrlPMRU<cr>
 
 "uncomment if you want to launch Ctrl-P in regexp and file-name mode automatically
-"let g:ctrlp_regexp = 1
-"let g:ctrlp_by_filename = 1
+let g:ctrlp_regexp = 1
+let g:ctrlp_by_filename = 1
+let g:ctrlp_max_files = 0
 
 
 "" airline
